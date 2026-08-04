@@ -25,18 +25,20 @@
 .nav-principal ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
 .nav-principal a {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .nav-principal a:hover {
     text-decoration: underline;
 }
+
 
 /*------------------HEADER-------------*/
 
