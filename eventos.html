@@ -3,107 +3,151 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventos - CultivaSustentable</title>
+    <title>Eventos - PANAH</title>
     <meta
       name="description"
-      content="Calendario de eventos de CultivaSustentable: talleres, ferias y jornadas de agricultura urbana sostenible."
+      content="Calendario de eventos de PANAH (Proyecto Amigos Nutriendo a Honduras): jornadas de entrega de víveres, brigadas de voluntarios y campañas de ayuda humanitaria."
     />
     <link rel="stylesheet" href="css/main_style.css" />
     <link rel="stylesheet" href="css/eventos.css" />
   </head>
   <body>
-    <header>
-      <h1>CultivaSustentable</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="acerca.html">Acerca de Nosotros</a></li>
-          <li><a href="programas.html">Nuestros Programas</a></li>
-          <li><a href="como-ayudar.html">Cómo Ayudar</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="contacto.html">Contáctenos</a></li>
-          <li><a href="donaciones.html">Donaciones</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
-      <h2>Nuestros Eventos</h2>
-      <p>
-        Talleres, ferias y jornadas para aprender y practicar agricultura urbana
-        sostenible.
+      <h1>Nuestros Eventos</h1>
+      <p class="intro">
+        Jornadas de entrega de víveres, brigadas de voluntarios y campañas de
+        ayuda para llevar alimento y esperanza a las familias que más lo
+        necesitan en Honduras.
       </p>
 
       <section id="proximos">
-        <h3>Próximos Eventos</h3>
+        <h2>Próximos Eventos</h2>
 
-        <article class="evento">
-          <h4>Taller de Huertos Verticales para Principiantes</h4>
-          <p class="fecha">15 de agosto de 2026</p>
-          <p class="hora">9:00 a.m. - 12:00 p.m.</p>
-          <p class="lugar">Centro Comunitario Los Pinos, Tegucigalpa</p>
-          <p>
-            Aprende a construir tu primer huerto vertical con materiales
-            reciclados. Incluye kit de semillas de hortalizas para llevar a
-            casa.
-          </p>
-        </article>
+        <div class="eventos-grid">
+          <article class="evento">
+            <img
+              src="img/entrega-viveres-rural.jpg"
+              alt="Madre sonriente y sus dos hijos reciben bolsas de víveres y agua en una comunidad rural de Honduras"
+            />
+            <div class="evento-info">
+              <h3>Jornada de Entrega de Víveres en Comunidades Rurales</h3>
+              <p class="meta">Sábado 23 de agosto de 2026</p>
+              <p class="meta">8:00 a.m. - 1:00 p.m.</p>
+              <p class="meta">Aldea El Porvenir, Francisco Morazán</p>
+              <p>
+                Entrega de bolsas solidarias con alimentos básicos y agua a
+                familias de escasos recursos. Los voluntarios recorren las
+                comunidades casa por casa para llegar a quienes más lo
+                necesitan.
+              </p>
+            </div>
+          </article>
 
-        <article class="evento">
-          <h4>Feria de Intercambio de Semillas Nativas</h4>
-          <p class="fecha">6 de septiembre de 2026</p>
-          <p class="hora">8:00 a.m. - 2:00 p.m.</p>
-          <p class="lugar">Parque Central, Comayagüela</p>
-          <p>
-            Trae tus semillas e intercámbialas con otros cultivadores urbanos.
-            Charlas gratuitas sobre compostaje y riego eficiente.
-          </p>
-        </article>
+          <article class="evento">
+            <img
+              src="img/voluntarios-panah.jpg"
+              alt="Equipo de voluntarios de PANAH durante una jornada de ayuda en una iglesia"
+            />
+            <div class="evento-info">
+              <h3>Brigada de Voluntarios PANAH</h3>
+              <p class="meta">Domingo 7 de septiembre de 2026</p>
+              <p class="meta">9:00 a.m. - 12:00 m.</p>
+              <p class="meta">Sede de PANAH, Tegucigalpa</p>
+              <p>
+                Convocatoria abierta para nuevos voluntarios. Se organizan las
+                bolsas de víveres, se coordinan las rutas de entrega y se
+                capacita al equipo. No se necesita experiencia, solo ganas de
+                ayudar.
+              </p>
+            </div>
+          </article>
 
-        <article class="evento">
-          <h4>Jornada de Reforestación Urbana</h4>
-          <p class="fecha">27 de septiembre de 2026</p>
-          <p class="hora">7:00 a.m. - 11:00 a.m.</p>
-          <p class="lugar">Cerro El Berrinche, Tegucigalpa</p>
-          <p>
-            Únete como voluntario para plantar árboles nativos y crear jardines
-            colgantes comunitarios. Se proporcionan herramientas y refrigerio.
-          </p>
-        </article>
+          <article class="evento">
+            <img
+              src="img/campana-una-bolsa.jpg"
+              alt="Hombre adulto mayor recibe una bolsa de alimentos de parte de PANAH en una zona rural"
+            />
+            <div class="evento-info">
+              <h3>Campaña "Una Bolsa, Una Familia"</h3>
+              <p class="meta">Sábado 27 de septiembre de 2026</p>
+              <p class="meta">7:00 a.m. - 11:00 a.m.</p>
+              <p class="meta">Comayagüela, Distrito Central</p>
+              <p>
+                Campaña de recolección y entrega de alimentos e insumos de
+                higiene en zonas urbanas vulnerables. Cada donación equivale a
+                una bolsa que alimenta a una familia durante varios días.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="pasados">
-        <h3>Eventos Pasados</h3>
+        <h2>Eventos Pasados</h2>
 
-        <article class="evento">
-          <h4>Charla: Agricultura Urbana en Países en Desarrollo</h4>
-          <p class="fecha">12 de junio de 2026</p>
-          <p class="hora">4:00 p.m. - 6:00 p.m.</p>
-          <p class="lugar">Universidad Nacional, Tegucigalpa</p>
-          <p>
-            Conferencia sobre cómo los cultivos verticales pueden mejorar la
-            seguridad alimentaria en comunidades urbanas de bajos recursos.
-          </p>
-        </article>
+        <div class="eventos-grid">
+          <article class="evento">
+            <img
+              src="img/jornada-basilica.jpg"
+              alt="Familias hondureñas resguardadas dentro de una basílica reciben alimentos y abrigo durante una jornada nocturna de PANAH"
+            />
+            <div class="evento-info">
+              <h3>Jornada Nocturna de Apoyo en la Basílica</h3>
+              <p class="meta">18 de enero de 2026</p>
+              <p class="meta">6:00 p.m. - 10:00 p.m.</p>
+              <p class="meta">Basílica de Suyapa, Tegucigalpa</p>
+              <p>
+                PANAH repartió cenas calientes, agua y cobijas a decenas de
+                familias que se resguardaban durante la temporada de frío. Una
+                de las jornadas con mayor participación de voluntarios.
+              </p>
+            </div>
+          </article>
 
-        <article class="evento">
-          <h4>Primer Encuentro de Cultivadores Urbanos</h4>
-          <p class="fecha">3 de mayo de 2026</p>
-          <p class="hora">10:00 a.m. - 1:00 p.m.</p>
-          <p class="lugar">Plaza La Merced, Tegucigalpa</p>
-          <p>
-            Más de 50 familias compartieron sus experiencias creando huertos en
-            balcones y azoteas. Se formó la primera red de apoyo comunitario.
-          </p>
-        </article>
+          <article class="evento">
+            <img
+              src="img/reparto-mascarillas.jpg"
+              alt="Joven sostiene un cartel de agradecimiento junto a los alimentos y mascarillas recibidos de PANAH"
+            />
+            <div class="evento-info">
+              <h3>Campaña de Reparto de Mascarillas y Alimentos</h3>
+              <p class="meta">15 de noviembre de 2025</p>
+              <p class="meta">9:00 a.m. - 2:00 p.m.</p>
+              <p class="meta">Varias comunidades de Honduras</p>
+              <p>
+                Durante la emergencia sanitaria, PANAH entregó mascarillas, gel
+                antibacterial y paquetes de alimentos a familias afectadas. Se
+                atendió a más de 200 personas en zonas rurales y urbanas.
+              </p>
+            </div>
+          </article>
+
+          <article class="evento">
+            <img
+              src="img/nino-basilica.jpg"
+              alt="Niño sonriente muestra el jugo y el sándwich que recibió en una jornada de PANAH"
+            />
+            <div class="evento-info">
+              <h3>Entrega de Meriendas a la Niñez</h3>
+              <p class="meta">20 de diciembre de 2025</p>
+              <p class="meta">3:00 p.m. - 6:00 p.m.</p>
+              <p class="meta">Tegucigalpa, Francisco Morazán</p>
+              <p>
+                PANAH repartió meriendas nutritivas —jugos, sándwiches y fruta—
+                a niños y niñas de familias vulnerables, reforzando su
+                alimentación en una jornada pensada especialmente para los más
+                pequeños.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>CultivaSustentable &copy; 2026 - Agricultura urbana sostenible</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="js/incluir.js"></script>
   </body>
 </html>
