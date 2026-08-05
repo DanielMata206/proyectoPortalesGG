@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones - PANAH</title>
+    
+    <link rel="stylesheet" href="css/main_style.css">
+    
+
+    <link rel="stylesheet" href="css/donaciones.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="sitio-header">
+        <div class="header-contenido">
+            <div class="logo">
+                <img src="logo.png" alt="Logo PANAH">
+            </div>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="historia.html">Nuestra Historia</a></li>
+                    <li><a href="donaciones.html">Donaciones</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-donaciones">
+            <h1>Ayuda a PANAH</h1>
+            <p>Tu donación marca la diferencia en la vida de personas que más lo necesitan. Juntos podemos cambiar vidas en Honduras.</p>
+        </section>
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <div class="contenedor">
+
+            <!-- SECCIÓN INFO + MÉTODOS DE PAGO -->
+            <section class="seccion-info">
+                <div class="info-texto">
+                    <h2>¿Por Qué Donar?</h2>
+                    <p>En PANAH creemos que todos merecen tener acceso a alimentos básicos y ayuda médica. Cada donación que recibimos nos permite llegar a más personas en situación de vulnerabilidad en las calles, semáforos y hospitales públicos de Honduras.</p>
+                    <p><strong>Tu aporte puede ser:</strong></p>
+                    <ul style="margin-left: 20px; line-height: 2;">
+                        <li>Alimentos de la canasta básica</li>
+                        <li>Suministros médicos para hospitales</li>
+                        <li>Donaciones económicas</li>
+                    </ul>
+                    <p style="margin-top: 20px;">Sin importar la cantidad, toda donación es valiosa y contribuye a nuestra misión de ayudar a los más necesitados.</p>
+                </div>
+
+                <div class="metodos-pago">
+                    <h3>Métodos de Pago</h3>
+                    
+                    <div class="metodo">
+                        <h4>💳 Tarjeta de Crédito/Débito</h4>
+                        <p>Realiza tu donación de forma segura a través de nuestra plataforma. Se aceptan todas las tarjetas de crédito y débito principales.</p>
+                        <p style="margin-top: 10px; font-weight: bold; color: #ff9d00;">Datos de pago: [Completar con información real]</p>
+                    </div>
+
+                    <div class="metodo">
+                        <h4>🏦 Transferencia Bancaria</h4>
+                        <p>Puedes hacer una transferencia directa a nuestra cuenta bancaria. Esto es especialmente útil para donaciones mayores.</p>
+                        <p><strong>Banco:</strong> [Nombre del banco]</p>
+                        <p><strong>Número de Cuenta:</strong> [Número de cuenta]</p>
+                        <p><strong>Titular:</strong> Proyecto Amigos Nutriendo a Honduras (PANAH)</p>
+                    </div>
+
+                    <div class="metodo">
+                        <h4>💰 Efectivo</h4>
+                        <p>Si prefieres donar en efectivo, puedes ponerte en contacto con nosotros para conocer nuestras ubicaciones y puntos de entrega en Tegucigalpa.</p>
+                        <p>Contáctanos: [Teléfono] o [Email]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN IMPACTO -->
+            <section class="impacto">
+                <h3>Tu Impacto</h3>
+                <p>Cada lempira cuenta. Con tan solo L.50 podemos proporcionar comida a una persona. Con L.200 podemos suministrar medicinas esenciales. ¿Cuántas vidas quieres tocar hoy?</p>
+            </section>
+
+            <!-- FORMULARIO DE DONACIÓN -->
+            <section class="formulario-container">
+                <h2>Realiza Tu Donación</h2>
+                
+                <div class="mensaje-exito" id="mensajeExito">
+                    ¡Gracias por tu donación! Tu contribución ha sido registrada exitosamente.
+                </div>
+
+                <form class="formulario" id="formularioDonacion" onsubmit="manejarEnvio(event)">
+                    
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="pais">País</label>
+                        <input type="text" id="pais" name="pais" value="Honduras">
+                    </div>
+
+                    <div class="campo-formulario full">
+                        <label for="monto">Monto de Donación (Lempiras) *</label>
+                        <div class="opciones-donacion">
+                            <label class="opcion-monto">
+                                <input type="radio" name="monto" value="50" required> L.50
+                            </label>
+                            <label class="opcion-monto">
+                                <input type="radio" name="monto" value="100"> L.100
+                            </label>
+                            <label class="opcion-monto">
+                                <input type="radio" name="monto" value="200"> L.200
+                            </label>
+                            <label class="opcion-monto">
+                                <input type="radio" name="monto" value="500"> L.500
+                            </label>
+                            <label class="opcion-monto">
+                                <input type="radio" name="monto" value="1000"> L.1,000
+                            </label>
+                            <label class="opcion-monto">
+                                <input type="radio" name="monto" value="otro"> Otro
+                            </label>
+                        </div>
+                        <input type="number" id="montoPersonalizado" name="montoPersonalizado" placeholder="Ingresa tu monto personalizado" style="margin-top: 10px; display: none;">
+                    </div>
+
+                    <div class="campo-formulario full">
+                        <label for="metodo">Método de Pago *</label>
+                        <select id="metodo" name="metodo" required>
+                            <option value="">Selecciona un método</option>
+                            <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                            <option value="transferencia">Transferencia Bancaria</option>
+                            <option value="efectivo">Efectivo</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario full">
+                        <label for="mensaje">Mensaje (Opcional)</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos por qué quieres ayudar a PANAH..."></textarea>
+                    </div>
+
+                    <div class="campo-formulario full">
+                        <label style="display: flex; align-items: center; font-weight: normal;">
+                            <input type="checkbox" id="recibir" name="recibir" style="width: auto; margin-right: 10px;">
+                            Deseo recibir actualizaciones sobre el trabajo de PANAH
+                        </label>
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" class="btn-donar">Donar Ahora</button>
+                        <button type="reset" class="btn-limpiar">Limpiar Formulario</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="sitio-footer">
+        <div class="footer-contenido">
+            <div>
+                <p>&copy; 2024 PANAH - Proyecto Amigos Nutriendo a Honduras. Coordinadora: María A Molina</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de Donaciones -->
+    <script src="js/donaciones.js"></script>
+</body>
+</html>
