@@ -297,3 +297,40 @@ html {
     .noticia-card { grid-template-columns: 1fr; }
     .noticia-card img { aspect-ratio: 16 / 10; }
 }
+
+.sumate { position: relative; overflow: hidden; background: var(--dorado); }
+.sumate::after { position: absolute; right: -140px; bottom: -190px; width: 430px; height: 430px; border: 1px solid rgba(0, 61, 130, .2); border-radius: 50%; content: ""; box-shadow: 0 0 0 58px rgba(30, 144, 255, .08), 0 0 0 116px rgba(233, 30, 99, .05); }
+.sumate-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: clamp(40px, 8vw, 98px); }
+.sumate .etiqueta { color: var(--magenta); }
+.sumate .titulo-seccion { color: var(--navy); }
+.sumate-texto > p:not(.etiqueta) { max-width: 650px; margin: 21px 0 29px; color: rgba(0, 61, 130, .78); }
+.boton-navy { background: var(--navy); color: var(--blanco); box-shadow: 0 14px 28px rgba(0, 61, 130, .24); }
+.boton-navy:hover { background: var(--cielo); }
+.sumate-opciones { border-top: 1px solid rgba(0, 61, 130, .25); }
+.sumate-opciones article { display: grid; grid-template-columns: 42px 1fr; gap: 18px; padding: 25px 0; border-bottom: 1px solid rgba(0, 61, 130, .25); }
+.sumate-opciones article > span { padding-top: 4px; color: var(--magenta); font-size: .68rem; font-weight: 900; letter-spacing: .12em; }
+.sumate-opciones h3 { margin: 0; color: var(--navy); font-size: 1.22rem; }
+.sumate-opciones p { margin: 3px 0 0; color: rgba(0, 61, 130, .72); font-size: .86rem; }
+
+.pagina-inicio .sitio-header { border-bottom-color: var(--dorado); }
+.pagina-inicio .nav-principal a { color: var(--navy); }
+.pagina-inicio .nav-principal a:hover,
+.pagina-inicio .nav-principal a[aria-current="page"] { color: var(--magenta); }
+.pagina-inicio .sitio-footer { margin-top: 0; background: var(--navy); }
+.pagina-inicio .footer-links a:hover { color: var(--dorado); }
+
+@media (max-width: 800px) {
+    .sumate-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+    .pagina-inicio .sitio-header { padding-inline: 14px; }
+    .pagina-inicio .header-contenido { justify-content: center; }
+    .pagina-inicio .nav-principal ul { justify-content: center; gap: 10px 14px; padding: 0; }
+    .pagina-inicio .nav-principal a { font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .pagina-inicio *, .pagina-inicio *::before, .pagina-inicio *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
