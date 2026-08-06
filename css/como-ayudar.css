@@ -595,6 +595,16 @@ html {
     text-decoration: none;
 }
 
+.aviso-sin-js {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 14px 16px;
+    border-left: 4px solid var(--ayudar-dorado);
+    background-color: var(--ayudar-blanco);
+    color: var(--ayudar-texto);
+    font-size: 0.88rem;
+}
+
 .ayudar-confianza {
     background-color: var(--ayudar-blanco);
 }

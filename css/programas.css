@@ -247,6 +247,16 @@ html {
     display: none;
 }
 
+.aviso-sin-js {
+    max-width: 680px;
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    border-left: 4px solid var(--programas-dorado);
+    background-color: var(--programas-blanco);
+    color: var(--programas-texto);
+    font-size: 0.88rem;
+}
+
 .programas-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
