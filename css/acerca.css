@@ -77,3 +77,90 @@
 .btn-cta:hover {
     background-color: #256428;
 }
+
+
+.acerca-de-nosotros,
+.nuestra-historia,
+.nuestros-valores,
+.cta-acerca {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.acerca-de-nosotros h2,
+.nuestra-historia h3,
+.nuestros-valores h3 {
+    margin-bottom: 15px;
+}
+
+.acerca-de-nosotros p,
+.nuestra-historia p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.img-destacada {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.historia-contenido {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-historia {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.historia-texto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.nuestros-valores ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nuestros-valores li {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #2e7d32;
+}
+
+.cta-acerca {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.cta-acerca p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: #256428;
+}
