@@ -195,3 +195,98 @@ html {
     font-weight: 900;
     box-shadow: var(--ayudar-sombra);
 }
+
+.ayudar-formas {
+    background-color: var(--ayudar-fondo);
+}
+
+.ayudar-formas .ayudar-etiqueta {
+    color: var(--ayudar-magenta);
+}
+
+.ayudar-encabezado-seccion {
+    max-width: 800px;
+}
+
+.ayudar-encabezado-seccion h2 {
+    margin: 0;
+    color: var(--ayudar-azul);
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.ayudar-encabezado-seccion > p:last-child {
+    max-width: 680px;
+    margin: 20px 0 0;
+    color: var(--ayudar-texto);
+    font-size: 1.04rem;
+}
+
+.ayudar-formas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 52px;
+}
+
+.ayudar-forma {
+    display: flex;
+    min-height: 315px;
+    flex-direction: column;
+    padding: 28px;
+    border: 1px solid var(--ayudar-linea);
+    border-radius: var(--ayudar-radio);
+    background-color: var(--ayudar-blanco);
+    box-shadow: 0 14px 35px rgba(0, 61, 130, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ayudar-forma:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--ayudar-sombra);
+}
+
+.ayudar-forma:nth-child(2) {
+    border-color: var(--ayudar-dorado);
+    background-color: var(--ayudar-dorado);
+}
+
+.ayudar-forma > span {
+    color: var(--ayudar-magenta);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+}
+
+.ayudar-forma h3 {
+    margin: 46px 0 12px;
+    color: var(--ayudar-azul);
+    font-size: 1.35rem;
+    line-height: 1.15;
+}
+
+.ayudar-forma p {
+    margin: 0;
+    color: var(--ayudar-texto);
+    font-size: 0.9rem;
+}
+
+.ayudar-forma:nth-child(2) p {
+    color: rgba(0, 61, 130, 0.78);
+}
+
+.ayudar-forma a {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 24px;
+    border-bottom: 2px solid var(--ayudar-dorado);
+    color: var(--ayudar-azul);
+    font-size: 0.84rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.ayudar-forma:nth-child(2) a {
+    border-color: var(--ayudar-magenta);
+}
