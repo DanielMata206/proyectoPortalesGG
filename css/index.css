@@ -120,3 +120,59 @@ html {
     :root { --contenedor: min(100% - 28px, 1160px); }
     .seccion { padding: 76px 0; }
 }
+
+.hero {
+    position: relative;
+    display: grid;
+    min-height: 730px;
+    place-items: center;
+    overflow: hidden;
+    background: var(--navy);
+    color: var(--blanco);
+}
+
+.hero-fondo {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0, 35, 76, .97) 0%, rgba(0, 61, 130, .82) 48%, rgba(0, 61, 130, .15) 82%),
+        linear-gradient(0deg, rgba(0, 35, 76, .68), transparent 55%),
+        url("../img/nino-basilica.jpg") center 38% / cover no-repeat;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 1;
+    padding-block: 78px;
+}
+
+.hero-etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 20px;
+    color: var(--dorado);
+    font-size: .76rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.hero-etiqueta span { width: 34px; height: 2px; background: var(--magenta); }
+.hero h1 { max-width: 790px; margin: 0; font-size: clamp(3.3rem, 7.5vw, 7rem); line-height: .92; letter-spacing: -.06em; }
+.hero h1 em { display: block; color: var(--dorado); font-family: Georgia, serif; font-size: .9em; font-weight: 500; }
+.hero-texto { max-width: 590px; margin: 28px 0 0; color: rgba(255, 255, 255, .82); font-size: clamp(1rem, 1.8vw, 1.22rem); }
+.hero-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.boton-claro { border-color: rgba(255, 255, 255, .5); color: var(--blanco); }
+.boton-claro:hover { background: rgba(255, 255, 255, .1); }
+.hero-dato { display: flex; max-width: 470px; align-items: center; gap: 16px; margin-top: 46px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .22); }
+.hero-dato strong { color: var(--cielo); font-size: 2.2rem; line-height: 1; }
+.hero-dato span { color: rgba(255, 255, 255, .72); font-size: .82rem; line-height: 1.4; }
+
+@media (max-width: 600px) {
+    .hero { min-height: 680px; }
+    .hero-fondo { background-position: 58% center; }
+    .hero h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+    .hero-acciones { align-items: stretch; flex-direction: column; }
+    .hero-acciones .boton { width: 100%; }
+}
