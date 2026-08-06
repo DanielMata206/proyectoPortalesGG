@@ -290,3 +290,104 @@ html {
 .ayudar-forma:nth-child(2) a {
     border-color: var(--ayudar-magenta);
 }
+
+.ayudar-especie {
+    background-color: var(--ayudar-blanco);
+}
+
+.ayudar-especie-grid {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    align-items: center;
+    gap: clamp(45px, 8vw, 100px);
+}
+
+.ayudar-especie .ayudar-etiqueta {
+    color: var(--ayudar-magenta);
+}
+
+.ayudar-especie h2 {
+    max-width: 700px;
+    margin: 0;
+    color: var(--ayudar-azul);
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.ayudar-texto-seccion {
+    max-width: 680px;
+    margin: 20px 0 0;
+    color: var(--ayudar-texto);
+}
+
+.ayudar-listas-insumos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.ayudar-listas-insumos article {
+    padding: 24px;
+    border-radius: 18px;
+    background-color: var(--ayudar-fondo);
+}
+
+.ayudar-listas-insumos article:nth-child(2) {
+    background-color: rgba(255, 157, 0, 0.16);
+}
+
+.ayudar-listas-insumos h3 {
+    margin: 0 0 12px;
+    color: var(--ayudar-azul);
+    font-size: 1.05rem;
+}
+
+.ayudar-listas-insumos ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--ayudar-texto);
+    font-size: 0.88rem;
+}
+
+.ayudar-listas-insumos li + li {
+    margin-top: 7px;
+}
+
+.ayudar-enlace {
+    display: inline-block;
+    margin-top: 28px;
+    border-bottom: 2px solid var(--ayudar-dorado);
+    color: var(--ayudar-azul);
+    font-size: 0.86rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.ayudar-especie-imagen {
+    position: relative;
+    margin: 0;
+}
+
+.ayudar-especie-imagen img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--ayudar-radio);
+    object-fit: cover;
+    box-shadow: var(--ayudar-sombra);
+}
+
+.ayudar-especie-imagen figcaption {
+    position: absolute;
+    right: -24px;
+    bottom: 28px;
+    max-width: 245px;
+    padding: 18px 20px;
+    border: 6px solid var(--ayudar-blanco);
+    border-radius: 16px;
+    background-color: var(--ayudar-azul);
+    color: var(--ayudar-blanco);
+    font-size: 0.84rem;
+    font-weight: 800;
+}
