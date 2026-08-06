@@ -715,3 +715,112 @@ html {
 .ayudar-boton-contorno:hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
+
+@media (max-width: 1050px) {
+    .ayudar-formas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ayudar-voluntariado-encabezado,
+    .ayudar-selector-grid,
+    .ayudar-confianza-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 820px) {
+    :root {
+        --ayudar-contenedor: min(100% - 30px, 1160px);
+    }
+
+    .ayudar-seccion {
+        padding: 74px 0;
+    }
+
+    .ayudar-portada-grid,
+    .ayudar-especie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ayudar-portada h1 {
+        font-size: clamp(3rem, 13vw, 5rem);
+    }
+
+    .ayudar-portada-imagen,
+    .ayudar-especie-imagen {
+        width: min(100%, 540px);
+    }
+
+    .ayudar-portada-imagen figcaption,
+    .ayudar-especie-imagen figcaption {
+        right: -7px;
+    }
+
+    .ayudar-pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .ayudar-pasos li {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ayudar-formas-grid,
+    .ayudar-listas-insumos,
+    .ayudar-selector-opciones {
+        grid-template-columns: 1fr;
+    }
+
+    .ayudar-forma {
+        min-height: 280px;
+    }
+
+    .ayudar-acciones,
+    .ayudar-voluntariado-acciones {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .ayudar-boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ayudar-enlace-claro {
+        align-self: flex-start;
+    }
+
+    .ayudar-portada-imagen figcaption,
+    .ayudar-especie-imagen figcaption {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: none;
+        margin: -20px 14px 0;
+    }
+
+    .ayudar-recomendacion,
+    .ayudar-pasos li,
+    .ayudar-forma {
+        padding: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .ayudar-boton,
+    .ayudar-forma,
+    .ayudar-selector-opciones button {
+        transition: none;
+    }
+
+    .ayudar-boton:hover,
+    .ayudar-forma:hover {
+        transform: none;
+    }
+}
