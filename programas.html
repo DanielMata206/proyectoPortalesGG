@@ -75,6 +75,25 @@
                     </p>
                 </div>
 
+                <div class="programas-filtros" role="group" aria-label="Filtrar líneas de acción">
+                    <button class="programas-filtro activo" type="button" data-filtro="todos" aria-pressed="true">
+                        Todas
+                    </button>
+                    <button class="programas-filtro" type="button" data-filtro="alimentacion" aria-pressed="false">
+                        Alimentación
+                    </button>
+                    <button class="programas-filtro" type="button" data-filtro="ninez" aria-pressed="false">
+                        Niñez
+                    </button>
+                    <button class="programas-filtro" type="button" data-filtro="emergencias" aria-pressed="false">
+                        Emergencias
+                    </button>
+                </div>
+
+                <p class="programas-estado-filtro" id="estado-filtro" aria-live="polite">
+                    Mostrando las 3 líneas de acción.
+                </p>
+
                 <div class="programas-grid">
                     <article class="programa-tarjeta" data-categoria="alimentacion">
                         <img
