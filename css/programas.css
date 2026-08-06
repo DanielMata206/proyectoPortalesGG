@@ -209,6 +209,44 @@ html {
     font-size: 1.05rem;
 }
 
+.programas-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 34px;
+}
+
+.programas-filtro {
+    min-height: 42px;
+    padding: 0 18px;
+    border: 1px solid var(--programas-linea);
+    border-radius: 999px;
+    background-color: var(--programas-blanco);
+    color: var(--programas-azul);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 800;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.programas-filtro:hover,
+.programas-filtro.activo {
+    border-color: var(--programas-azul);
+    background-color: var(--programas-azul);
+    color: var(--programas-blanco);
+}
+
+.programas-estado-filtro {
+    margin: 14px 0 0;
+    color: var(--programas-texto);
+    font-size: 0.82rem;
+}
+
+.programa-tarjeta[hidden] {
+    display: none;
+}
+
 .programas-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
