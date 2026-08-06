@@ -1,5 +1,5 @@
-*------------------ESTILOS PERSONALIZADOS DONACIONES-------------*/
- 
+/*------------------ESTILOS PERSONALIZADOS DONACIONES-------------*/
+
 .hero-donaciones {
     background: linear-gradient(135deg, #003d82 0%, #ff9d00 100%);
     color: white;
@@ -7,24 +7,34 @@
     text-align: center;
     margin-bottom: 40px;
 }
- 
+
 .hero-donaciones h1 {
     font-size: 2.5em;
     margin-bottom: 15px;
 }
- 
+
 .hero-donaciones p {
     font-size: 1.1em;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
- 
+
+.img-hero {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    object-fit: cover;
+}
+
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 30px;
 }
- 
+
 .seccion-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -32,7 +42,7 @@
     margin-bottom: 50px;
     align-items: start;
 }
- 
+
 .info-texto h2 {
     color: #003d82;
     font-size: 2em;
@@ -40,48 +50,59 @@
     border-bottom: 3px solid #ff9d00;
     padding-bottom: 10px;
 }
- 
+
 .info-texto p {
     line-height: 1.8;
     margin-bottom: 15px;
     color: #555;
 }
- 
+
+.img-info {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    object-fit: cover;
+    display: block;
+}
+
 .metodos-pago {
     background: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
- 
+
 .metodos-pago h3 {
     color: #003d82;
     font-size: 1.5em;
     margin-bottom: 20px;
 }
- 
+
 .metodo {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eee;
 }
- 
+
 .metodo:last-child {
     border-bottom: none;
 }
- 
+
 .metodo h4 {
     color: #ff9d00;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
- 
+
 .metodo p {
     color: #666;
     font-size: 0.95em;
     line-height: 1.6;
 }
- 
+
 .formulario-container {
     background: white;
     padding: 40px;
@@ -89,7 +110,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
- 
+
 .formulario-container h2 {
     color: #003d82;
     font-size: 2em;
@@ -97,29 +118,29 @@
     border-bottom: 3px solid #ff9d00;
     padding-bottom: 10px;
 }
- 
+
 .formulario {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
- 
+
 .campo-formulario {
     display: flex;
     flex-direction: column;
 }
- 
+
 .campo-formulario.full {
     grid-column: 1 / -1;
 }
- 
+
 .campo-formulario label {
     color: #003d82;
     font-weight: bold;
     margin-bottom: 8px;
     font-size: 0.95em;
 }
- 
+
 .campo-formulario input,
 .campo-formulario select,
 .campo-formulario textarea {
@@ -130,7 +151,7 @@
     font-family: 'Arial', sans-serif;
     transition: border-color 0.3s;
 }
- 
+
 .campo-formulario input:focus,
 .campo-formulario select:focus,
 .campo-formulario textarea:focus {
@@ -138,19 +159,19 @@
     border-color: #ff9d00;
     box-shadow: 0 0 5px rgba(255, 157, 0, 0.3);
 }
- 
+
 .campo-formulario textarea {
     resize: vertical;
     min-height: 100px;
 }
- 
+
 .opciones-donacion {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-top: 10px;
 }
- 
+
 .opcion-monto {
     padding: 10px;
     text-align: center;
@@ -160,16 +181,16 @@
     transition: all 0.3s;
     background: white;
 }
- 
+
 .opcion-monto:hover {
     border-color: #ff9d00;
     background-color: #fff9f0;
 }
- 
+
 .opcion-monto input[type="radio"] {
     margin-right: 5px;
 }
- 
+
 .botones {
     grid-column: 1 / -1;
     display: flex;
@@ -177,7 +198,7 @@
     justify-content: center;
     margin-top: 20px;
 }
- 
+
 .btn-donar {
     background-color: #ff9d00;
     color: white;
@@ -190,13 +211,13 @@
     transition: all 0.3s;
     box-shadow: 0 4px 8px rgba(255, 157, 0, 0.3);
 }
- 
+
 .btn-donar:hover {
     background-color: #e68a00;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(255, 157, 0, 0.4);
 }
- 
+
 .btn-limpiar {
     background-color: #ccc;
     color: #333;
@@ -208,12 +229,12 @@
     cursor: pointer;
     transition: all 0.3s;
 }
- 
+
 .btn-limpiar:hover {
     background-color: #bbb;
     transform: translateY(-2px);
 }
- 
+
 .mensaje-exito {
     background-color: #d4edda;
     color: #155724;
@@ -223,7 +244,7 @@
     display: none;
     text-align: center;
 }
- 
+
 .impacto {
     background: linear-gradient(135deg, #003d82 0%, #1a5bb4 100%);
     color: white;
@@ -232,13 +253,70 @@
     text-align: center;
     margin-bottom: 40px;
 }
- 
+
 .impacto h3 {
     font-size: 1.8em;
     margin-bottom: 20px;
 }
- 
+
 .impacto p {
     font-size: 1.1em;
     line-height: 1.8;
+}
+
+/*------------------RESPONSIVE DONACIONES-------------*/
+
+@media (max-width: 768px) {
+    .seccion-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .opciones-donacion {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-donaciones h1 {
+        font-size: 2em;
+    }
+
+    .hero-donaciones p {
+        font-size: 1em;
+    }
+
+    .hero-donaciones {
+        padding: 40px 20px;
+    }
+
+    .img-hero {
+        max-height: 300px;
+    }
+
+    .info-texto h2 {
+        font-size: 1.5em;
+    }
+
+    .img-info {
+        width: 100%;
+        height: 400px;          
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        margin-bottom: 20px;
+        object-fit: cover;
+        object-position: center 25%;  
+        display: block;
+}
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .btn-donar,
+    .btn-limpiar {
+        width: 100%;
+    }
 }
