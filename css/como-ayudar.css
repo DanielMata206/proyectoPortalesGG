@@ -594,3 +594,124 @@ html {
     font-weight: 900;
     text-decoration: none;
 }
+
+.ayudar-confianza {
+    background-color: var(--ayudar-blanco);
+}
+
+.ayudar-confianza-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: clamp(40px, 8vw, 95px);
+}
+
+.ayudar-confianza .ayudar-etiqueta {
+    color: var(--ayudar-magenta);
+}
+
+.ayudar-confianza h2 {
+    margin: 0;
+    color: var(--ayudar-azul);
+    font-size: clamp(2.3rem, 5vw, 4.4rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.ayudar-confianza div > p:not(.ayudar-etiqueta) {
+    max-width: 650px;
+    margin: 20px 0 0;
+    color: var(--ayudar-texto);
+}
+
+.ayudar-verificaciones {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--ayudar-linea);
+    list-style: none;
+}
+
+.ayudar-verificaciones li {
+    position: relative;
+    padding: 22px 10px 22px 48px;
+    border-bottom: 1px solid var(--ayudar-linea);
+    color: var(--ayudar-azul);
+    font-weight: 800;
+}
+
+.ayudar-verificaciones li::before {
+    position: absolute;
+    top: 21px;
+    left: 5px;
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border-radius: 50%;
+    background-color: rgba(40, 167, 69, 0.13);
+    color: var(--ayudar-verde);
+    content: "✓";
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.ayudar-cta {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--ayudar-dorado);
+}
+
+.ayudar-cta::after {
+    position: absolute;
+    right: -140px;
+    bottom: -210px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(0, 61, 130, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 0 58px rgba(30, 144, 255, 0.08), 0 0 0 116px rgba(233, 30, 99, 0.05);
+    content: "";
+}
+
+.ayudar-cta-contenido {
+    position: relative;
+    z-index: 1;
+}
+
+.ayudar-cta .ayudar-etiqueta {
+    color: var(--ayudar-magenta);
+}
+
+.ayudar-cta h2 {
+    max-width: 880px;
+    margin: 0;
+    color: var(--ayudar-azul);
+    font-size: clamp(2.5rem, 5.8vw, 5.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+}
+
+.ayudar-cta-contenido > p:not(.ayudar-etiqueta) {
+    max-width: 650px;
+    margin: 22px 0 0;
+    color: rgba(0, 61, 130, 0.78);
+}
+
+.ayudar-boton-oscuro {
+    background-color: var(--ayudar-azul);
+    color: var(--ayudar-blanco);
+    box-shadow: 0 14px 28px rgba(0, 61, 130, 0.24);
+}
+
+.ayudar-boton-oscuro:hover {
+    background-color: #075aaa;
+}
+
+.ayudar-boton-contorno {
+    border-color: rgba(0, 61, 130, 0.42);
+    color: var(--ayudar-azul);
+}
+
+.ayudar-boton-contorno:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
