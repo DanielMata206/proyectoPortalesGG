@@ -67,3 +67,117 @@ html {
     outline: 3px solid var(--programas-magenta);
     outline-offset: 4px;
 }
+
+.programas-portada {
+    position: relative;
+    display: grid;
+    min-height: 590px;
+    place-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 82% 25%, rgba(30, 144, 255, 0.38), transparent 28%),
+        linear-gradient(135deg, #002c60 0%, var(--programas-azul) 65%, #075aaa 100%);
+    color: var(--programas-blanco);
+}
+
+.programas-portada::before,
+.programas-portada::after {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 50%;
+    content: "";
+}
+
+.programas-portada::before {
+    right: -130px;
+    bottom: -220px;
+    width: 480px;
+    height: 480px;
+    box-shadow:
+        0 0 0 55px rgba(255, 157, 0, 0.08),
+        0 0 0 110px rgba(233, 30, 99, 0.05);
+}
+
+.programas-portada::after {
+    top: 70px;
+    right: 12%;
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 157, 0, 0.12);
+}
+
+.programas-portada-contenido {
+    position: relative;
+    z-index: 1;
+}
+
+.programas-etiqueta {
+    margin: 0 0 18px;
+    color: var(--programas-dorado);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.programas-portada h1 {
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+}
+
+.programas-portada h1 span {
+    display: block;
+    color: var(--programas-dorado);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.88em;
+    font-weight: 500;
+}
+
+.programas-resumen {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.1rem;
+}
+
+.programas-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.programas-boton {
+    display: inline-flex;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.programas-boton:hover {
+    transform: translateY(-2px);
+}
+
+.programas-boton-principal {
+    background-color: var(--programas-dorado);
+    color: var(--programas-azul);
+    box-shadow: 0 14px 30px rgba(255, 157, 0, 0.25);
+}
+
+.programas-boton-secundario {
+    border-color: rgba(255, 255, 255, 0.55);
+    color: var(--programas-blanco);
+}
+
+.programas-boton-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
