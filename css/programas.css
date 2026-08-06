@@ -334,3 +334,103 @@ html {
     font-weight: 900;
     text-decoration: none;
 }
+
+.programas-impacto {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--programas-azul);
+    color: var(--programas-blanco);
+}
+
+.programas-impacto::before {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 85% 12%, rgba(30, 144, 255, 0.3), transparent 30%);
+    content: "";
+}
+
+.programas-impacto .programas-contenedor {
+    position: relative;
+}
+
+.programas-impacto .programas-etiqueta {
+    color: var(--programas-dorado);
+}
+
+.programas-impacto-encabezado {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+    gap: 50px;
+}
+
+.programas-impacto-encabezado h2 {
+    max-width: 720px;
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.programas-impacto-encabezado > p {
+    margin: 0 0 6px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.programas-impacto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.programas-impacto-grid article {
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--programas-radio);
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.programas-impacto-grid article:nth-child(2) {
+    border-color: var(--programas-dorado);
+    background-color: var(--programas-dorado);
+    color: var(--programas-azul);
+}
+
+.programas-impacto-grid strong {
+    color: var(--programas-cielo);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.programas-impacto-grid article:nth-child(2) strong {
+    color: var(--programas-magenta);
+}
+
+.programas-impacto-grid h3 {
+    margin: 13px 0 14px;
+    font-size: 1.18rem;
+}
+
+.programas-impacto-grid p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.programas-impacto-grid article:nth-child(2) p {
+    color: rgba(0, 61, 130, 0.78);
+}
+
+.programas-impacto-grid a {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 25px;
+    color: inherit;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
