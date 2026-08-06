@@ -210,6 +210,36 @@
                 </div>
             </div>
         </section>
+
+        <section class="ayudar-selector ayudar-seccion" aria-labelledby="titulo-selector">
+            <div class="ayudar-contenedor ayudar-selector-grid">
+                <div class="ayudar-selector-pregunta">
+                    <p class="ayudar-etiqueta">Encontrá tu manera</p>
+                    <h2 id="titulo-selector">¿Qué te gustaría aportar?</h2>
+                    <p>
+                        Seleccioná una opción y te mostraremos un siguiente paso sencillo.
+                    </p>
+
+                    <div class="ayudar-selector-opciones" role="group" aria-label="Tipo de aporte">
+                        <button type="button" data-ayuda="tiempo" aria-pressed="false">Mi tiempo</button>
+                        <button type="button" data-ayuda="insumos" aria-pressed="false">Alimentos o insumos</button>
+                        <button type="button" data-ayuda="dinero" aria-pressed="false">Un aporte económico</button>
+                        <button type="button" data-ayuda="difusion" aria-pressed="false">Difusión</button>
+                    </div>
+                </div>
+
+                <article class="ayudar-recomendacion" id="recomendacion-ayuda" aria-live="polite">
+                    <p class="ayudar-recomendacion-etiqueta">Siguiente paso</p>
+                    <h3 id="recomendacion-titulo">Elegí una forma de colaborar</h3>
+                    <p id="recomendacion-texto">
+                        Podés donar, participar como voluntario o compartir las campañas oficiales.
+                    </p>
+                    <a id="recomendacion-enlace" href="#formas-ayudar">
+                        Ver todas las opciones
+                    </a>
+                </article>
+            </div>
+        </section>
     </main>
 
     <div id="footer-placeholder"></div>
