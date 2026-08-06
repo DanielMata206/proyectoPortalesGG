@@ -181,3 +181,118 @@ html {
 .programas-boton-secundario:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+.programas-listado {
+    background-color: var(--programas-fondo);
+}
+
+.programas-encabezado-seccion {
+    max-width: 760px;
+}
+
+.programas-listado .programas-etiqueta {
+    color: var(--programas-magenta);
+}
+
+.programas-encabezado-seccion h2 {
+    margin: 0;
+    color: var(--programas-azul);
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.programas-encabezado-seccion > p:last-child {
+    max-width: 680px;
+    margin: 20px 0 0;
+    color: var(--programas-texto);
+    font-size: 1.05rem;
+}
+
+.programas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 52px;
+}
+
+.programa-tarjeta {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--programas-linea);
+    border-radius: var(--programas-radio);
+    background-color: var(--programas-blanco);
+    box-shadow: 0 16px 40px rgba(0, 61, 130, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.programa-tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--programas-sombra);
+}
+
+.programa-tarjeta > img {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+}
+
+.programa-tarjeta-contenido {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 28px;
+}
+
+.programa-categoria {
+    margin: 0;
+    color: var(--programas-cielo);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.programa-tarjeta:nth-child(2) .programa-categoria {
+    color: var(--programas-magenta);
+}
+
+.programa-tarjeta:nth-child(3) .programa-categoria {
+    color: var(--programas-verde);
+}
+
+.programa-tarjeta h3 {
+    margin: 13px 0 14px;
+    color: var(--programas-azul);
+    font-size: 1.5rem;
+    line-height: 1.14;
+}
+
+.programa-tarjeta-contenido > p:not(.programa-categoria) {
+    margin: 0;
+    color: var(--programas-texto);
+    font-size: 0.94rem;
+}
+
+.programa-resultado {
+    margin-top: 22px !important;
+    padding-top: 18px;
+    border-top: 1px solid var(--programas-linea);
+}
+
+.programa-resultado strong {
+    color: var(--programas-azul);
+}
+
+.programa-enlace {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 24px;
+    border-bottom: 2px solid var(--programas-dorado);
+    color: var(--programas-azul);
+    font-size: 0.86rem;
+    font-weight: 900;
+    text-decoration: none;
+}
