@@ -494,3 +494,103 @@ html {
     font-weight: 900;
     text-decoration: none;
 }
+
+.ayudar-selector {
+    background-color: var(--ayudar-fondo);
+}
+
+.ayudar-selector-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: stretch;
+    gap: clamp(34px, 7vw, 80px);
+}
+
+.ayudar-selector .ayudar-etiqueta {
+    color: var(--ayudar-magenta);
+}
+
+.ayudar-selector h2 {
+    margin: 0;
+    color: var(--ayudar-azul);
+    font-size: clamp(2.3rem, 5vw, 4.4rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.ayudar-selector-pregunta > p:not(.ayudar-etiqueta) {
+    margin: 20px 0 0;
+    color: var(--ayudar-texto);
+}
+
+.ayudar-selector-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.ayudar-selector-opciones button {
+    min-height: 54px;
+    padding: 10px 16px;
+    border: 1px solid var(--ayudar-linea);
+    border-radius: 14px;
+    background-color: var(--ayudar-blanco);
+    color: var(--ayudar-azul);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 800;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ayudar-selector-opciones button:hover,
+.ayudar-selector-opciones button.activo {
+    border-color: var(--ayudar-azul);
+    background-color: var(--ayudar-azul);
+    color: var(--ayudar-blanco);
+}
+
+.ayudar-recomendacion {
+    display: flex;
+    min-height: 360px;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(32px, 5vw, 58px);
+    border-radius: 28px;
+    background-color: var(--ayudar-dorado);
+    color: var(--ayudar-azul);
+    box-shadow: var(--ayudar-sombra);
+}
+
+.ayudar-recomendacion-etiqueta {
+    margin: 0;
+    color: var(--ayudar-magenta);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ayudar-recomendacion h3 {
+    margin: 20px 0 12px;
+    font-size: clamp(1.9rem, 4vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+}
+
+.ayudar-recomendacion > p:not(.ayudar-recomendacion-etiqueta) {
+    margin: 0;
+    color: rgba(0, 61, 130, 0.78);
+}
+
+.ayudar-recomendacion a {
+    align-self: flex-start;
+    margin-top: 28px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--ayudar-magenta);
+    color: var(--ayudar-azul);
+    font-size: 0.86rem;
+    font-weight: 900;
+    text-decoration: none;
+}
