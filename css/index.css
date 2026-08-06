@@ -176,3 +176,27 @@ html {
     .hero-acciones { align-items: stretch; flex-direction: column; }
     .hero-acciones .boton { width: 100%; }
 }
+
+.franja-impacto { background: var(--blanco); box-shadow: 0 -10px 30px rgba(0, 61, 130, .05); }
+.impacto-grid { display: grid; grid-template-columns: 1.35fr repeat(3, 1fr); }
+.impacto-intro,
+.impacto-dato { display: flex; min-height: 145px; align-items: center; }
+.impacto-intro { gap: 15px; padding-right: 32px; }
+.impacto-intro > span { display: grid; width: 48px; height: 48px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: rgba(233, 30, 99, .11); color: var(--magenta); }
+.impacto-intro p { max-width: 250px; margin: 0; color: var(--navy); font-weight: 900; line-height: 1.35; }
+.impacto-dato { flex-direction: column; justify-content: center; align-items: flex-start; padding: 25px 28px; border-left: 1px solid var(--linea); }
+.impacto-dato strong { color: var(--navy); font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1; letter-spacing: -.04em; }
+.impacto-dato:nth-child(3) strong { color: var(--cielo); }
+.impacto-dato:nth-child(4) strong { color: var(--verde); }
+.impacto-dato span { margin-top: 8px; color: var(--texto-suave); font-size: .76rem; line-height: 1.35; }
+
+@media (max-width: 900px) {
+    .impacto-grid { grid-template-columns: repeat(3, 1fr); }
+    .impacto-intro { grid-column: 1 / -1; min-height: 96px; padding: 20px 0; border-bottom: 1px solid var(--linea); }
+    .impacto-dato:nth-child(2) { border-left: 0; }
+}
+
+@media (max-width: 560px) {
+    .impacto-grid { grid-template-columns: 1fr; }
+    .impacto-dato { min-height: 105px; border-top: 1px solid var(--linea); border-left: 0; padding-inline: 0; }
+}
