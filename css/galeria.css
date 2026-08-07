@@ -1,0 +1,130 @@
+:root {
+  --navy: #003d82;
+  --naranja: #ff9d00;
+  --gris-texto: #333333;
+  --gris-suave: #f4f6f9;
+  --blanco: #ffffff;
+  --borde: #e2e6ec;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+main > h1 {
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+
+/* ----- Carrusel ----- */
+.carusel {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.carusel .carusel-trail {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  transition: transform 1s ease;
+}
+
+.carusel .carusel-trail > section {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+}
+
+.carusel .carusel-trail > section picture,
+.carusel .carusel-trail > section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carusel .caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(to top, rgba(0, 61, 130, 0.85), rgba(0, 61, 130, 0));
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+/* ----- Flechas ----- */
+.carusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 61, 130, 0.7);
+  color: var(--blanco);
+  font-size: 1.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+  z-index: 5;
+}
+
+.carusel-btn:hover {
+  background-color: var(--naranja);
+}
+
+.carusel-btn-left {
+  left: 15px;
+}
+
+.carusel-btn-right {
+  right: 15px;
+}
+
+/* ----- Bolitas indexadoras ----- */
+.carusel-indexed-btns {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.carusel-indexed-btns > div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carusel-indexed-btns > div.current {
+  background-color: var(--naranja);
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 1.5rem 1.2rem;
+  }
+  .carusel {
+    height: 45vh;
+  }
+}
