@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - PANAH</title>
+    
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/faq.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dinámico -->
+    <div id="header-placeholder"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-faq">
+            <h1>Preguntas Frecuentes</h1>
+            <p>Encuentra respuestas a las preguntas más comunes sobre PANAH y cómo puedes ayudar.</p>
+        </section>
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <div class="contenedor-faq">
+
+            <!-- BARRA DE BÚSQUEDA -->
+            <div class="buscador-faq">
+                <input type="text" id="campoBusqueda" class="input-busqueda" placeholder="Busca una pregunta...">
+                <span class="icono-busqueda">🔍</span>
+            </div>
+
+            <!-- SECCIÓN DE PREGUNTAS -->
+            <section class="seccion-preguntas">
+                <h2>Preguntas Frecuentes</h2>
+
+                <!-- PREGUNTA 1 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Qué es PANAH?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>PANAH (Proyecto Amigos Nutriendo a Honduras) es una iniciativa de un grupo de amigos que se propone ayudar a las personas más necesitadas de Honduras, especialmente en esta época de crisis. Nuestra misión es proporcionar alimentos de la canasta básica y suministros médicos a quienes más lo necesitan.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 2 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿A quién ayuda PANAH?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>PANAH ayuda a las personas en situación de vulnerabilidad en Honduras, incluyendo:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li>Personas en las calles</li>
+                            <li>Personas en semáforos pidiendo ayuda</li>
+                            <li>Familias con inseguridad alimentaria</li>
+                            <li>Hospitales públicos del país</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 3 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Cómo se utilizan las donaciones?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Cada donación que recibimos se utiliza de la siguiente manera:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li><strong>Alimentos:</strong> Compramos productos de la canasta básica para distribuirlos</li>
+                            <li><strong>Suministros médicos:</strong> Adquirimos medicinas e insumos para hospitales públicos</li>
+                            <li><strong>Transporte:</strong> Utilizamos recursos para llevar la ayuda a donde se necesita</li>
+                            <li><strong>Gestión:</strong> Pequena parte para costos administrativos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 4 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Puedo donar solo dinero o también comida?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>¡Ambas opciones son válidas y valiosas! Aceptamos:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li><strong>Donaciones económicas:</strong> A través de tarjeta, transferencia o efectivo</li>
+                            <li><strong>Donaciones en especie:</strong> Alimentos, medicinas, ropa, etc.</li>
+                            <li><strong>Donaciones de tiempo:</strong> Voluntariado para ayudar en nuestras actividades</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-weight: bold; color: #ff9d00;">Para donar víveres, por favor contáctanos directamente.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 5 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Cómo puedo donar alimentos u otros víveres?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Para donar alimentos o víveres, puedes:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li>Contactarnos por teléfono: [Agregar número]</li>
+                            <li>Escribirnos por correo: [Agregar correo]</li>
+                            <li>Visitarnos en Tegucigalpa: [Agregar dirección]</li>
+                            <li>Seguirnos en redes sociales para conocer puntos de entrega</li>
+                        </ul>
+                        <p style="margin-top: 15px;">Aceptamos productos no perecederos y alimentos enlatados principalmente.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 6 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Cuál es la cantidad mínima para donar?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>No hay cantidad mínima de donación. Cada aporte es valioso sin importar el monto. Incluso L.50 nos permite ayudar a una persona proporcionándole comida.</p>
+                        <p style="margin-top: 15px;">Lo importante es que tu donación viene del corazón y contribuye a nuestra misión de ayudar a los más necesitados.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 7 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Con qué frecuencia puedo donar?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Puedes donar con la frecuencia que desees. Tenemos donantes que contribuyen:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li>De forma única o esporádica</li>
+                            <li>Mensualmente (donaciones recurrentes)</li>
+                            <li>En ocasiones especiales</li>
+                        </ul>
+                        <p style="margin-top: 15px;">Lo importante es que cada donación, sin importar la frecuencia, marca una diferencia en vidas reales.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 8 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Recibo algún comprobante de mi donación?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Sí, proporcionamos comprobantes de donación que incluyen:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li>Recibo digital enviado por correo</li>
+                            <li>Información sobre cómo se utilizó tu donación</li>
+                            <li>Número de referencia de transacción</li>
+                        </ul>
+                        <p style="margin-top: 15px;">Si necesitas documentación adicional para fines fiscales, por favor contáctanos directamente.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 9 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Cómo puedo mantenerme informado sobre el trabajo de PANAH?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>Puedes mantenerte actualizado de las actividades de PANAH a través de:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li>Suscribiéndote a nuestro boletín de noticias</li>
+                            <li>Siguiéndonos en redes sociales</li>
+                            <li>Visitando nuestro sitio web regularmente</li>
+                            <li>Contactándonos directamente para recibir reportes</li>
+                        </ul>
+                        <p style="margin-top: 15px;">Al donar, puedes marcar la opción de recibir actualizaciones sobre nuestro trabajo.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 10 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-titulo">¿Puedo ser voluntario en PANAH?</span>
+                        <span class="faq-icono">+</span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <p>¡Por supuesto! El voluntariado es fundamental en nuestro trabajo. Si estás interesado en ser voluntario, puedes:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                            <li>Contactarnos para conocer las oportunidades disponibles</li>
+                            <li>Ayudar en la distribución de alimentos</li>
+                            <li>Colaborar en eventos y campañas</li>
+                            <li>Contribuir con tus habilidades profesionales</li>
+                        </ul>
+                        <p style="margin-top: 15px;">Comunícate con nosotros para más información sobre cómo puedes ser parte de esta misión.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- SECCIÓN CTA -->
+            <section class="seccion-cta-faq">
+                <h3>¿No encontraste tu respuesta?</h3>
+                <p>Si tienes una pregunta que no está respondida aquí, no dudes en contactarnos.</p>
+                <a href="contacto.html" class="btn-contacto-faq">Contáctanos Aquí</a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer dinámico -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/incluir.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>
