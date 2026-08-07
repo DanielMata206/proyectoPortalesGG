@@ -162,3 +162,32 @@ main > h1::after {
     grid-template-columns: 1fr;
   }
 }
+
+.post-galeria-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin: 1.6rem 0;
+}
+
+.post-galeria-mini img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-contenido a {
+  color: var(--navy);
+  font-weight: bold;
+}
+
+.post-contenido a:hover {
+  color: var(--naranja);
+}
+
+@media (max-width: 640px) {
+  .post-galeria-mini {
+    grid-template-columns: 1fr;
+  }
+}
