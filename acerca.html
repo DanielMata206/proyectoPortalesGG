@@ -13,23 +13,23 @@
 
     <section class="acerca-de-nosotros">
         <h2>Acerca de Nosotros</h2>
-        <img src="img/Equipo.png" alt="Equipo de PANAH" class="img-destacada">
-        <p>
+        <img src="img/Equipo.png" alt="Equipo de PANAH" class="img-destacada animar-scroll">
+        <p class="animar-scroll">
             PANAH (Proyecto Amigos Nutriendo a Honduras) es una organización sin fines de lucro
             comprometida con ayudar a quienes más lo necesitan en Honduras.
         </p>
-        <p>
+        <p class="animar-scroll">
             Trabajamos para brindar apoyo y nutrición a comunidades vulnerables, con el objetivo
             de generar un impacto real y positivo en la vida de las personas.
         </p>
         <h3>Nuestra Misión</h3>
-        <p>
+        <p class="animar-scroll">
             Ayudar a los que más lo necesitan a través de donaciones y proyectos de nutrición
             sostenibles. Creemos que una alimentación adecuada es la base para que las familias
             hondureñas puedan salir adelante, estudiar, trabajar y construir un mejor futuro.
         </p>
         <h3>Nuestra Visión</h3>
-        <p>
+        <p class="animar-scroll">
             Ser una organización referente en Honduras en la lucha contra la desnutrición,
             reconocida por la transparencia de su trabajo y por el impacto duradero que genera
             en cada comunidad donde interviene.
@@ -39,8 +39,8 @@
     <section class="nuestra-historia">
         <h3>Nuestra Historia</h3>
         <div class="historia-contenido">
-            <img src="img/Nosotros.png" alt="Inicios de PANAH" class="img-historia">
-            <div class="historia-texto">
+            <img src="img/Nosotros.png" alt="Inicios de PANAH" class="img-historia animar-scroll">
+            <div class="historia-texto animar-scroll">
                 <p>
                     PANAH nació de la iniciativa de un grupo de amigos que, al ver de cerca la necesidad
                     de nutrición en comunidades vulnerables de Honduras, decidieron unir esfuerzos para
@@ -60,19 +60,19 @@
     <section class="nuestros-valores">
         <h3>Nuestros Valores</h3>
         <ul>
-            <li>
+            <li class="animar-scroll">
                 <strong>Transparencia:</strong> cada donación se administra de forma clara y
                 responsable, y rendimos cuentas a nuestros donantes sobre el destino de los fondos.
             </li>
-            <li>
+            <li class="animar-scroll">
                 <strong>Compromiso:</strong> trabajamos de cerca con las comunidades a las que
                 servimos, escuchando sus necesidades antes de actuar.
             </li>
-            <li>
+            <li class="animar-scroll">
                 <strong>Sostenibilidad:</strong> buscamos soluciones de nutrición a largo plazo,
                 no solo ayuda puntual, para que el impacto perdure en el tiempo.
             </li>
-            <li>
+            <li class="animar-scroll">
                 <strong>Solidaridad:</strong> creemos en el poder de la unión de esfuerzos para
                 lograr un cambio real en la vida de las personas.
             </li>
@@ -80,14 +80,27 @@
     </section>
 
     <section class="cta-acerca">
-        <p>¿Quieres ser parte del cambio?</p>
-        <a href="donaciones.html" class="btn-cta">Dona ahora</a>
+        <p class="animar-scroll">¿Quieres ser parte del cambio?</p>
+        <a href="donaciones.html" class="btn-cta animar-scroll">Dona ahora</a>
     </section>
 
     <div id="footer-placeholder"></div>
 
     <script src="js/incluir.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementos = document.querySelectorAll('.animar-scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            elementos.forEach(el => observer.observe(el));
+        });
+    </script>
 
-    
 </body>
 </html>
