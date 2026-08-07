@@ -28,13 +28,57 @@ main {
 
 main > h1 {
   color: var(--navy);
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+main > h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: var(--naranja);
+  border-radius: 2px;
+  margin-top: 0.6rem;
 }
 
 .intro {
-  max-width: 700px;
+  max-width: 720px;
   margin-bottom: 2.5rem;
   color: #555555;
+  font-size: 1.05rem;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.filtro-btn {
+  border: 2px solid var(--navy);
+  background-color: transparent;
+  color: var(--navy);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filtro-btn:hover {
+  background-color: rgba(0, 61, 130, 0.08);
+}
+
+.filtro-btn.activo {
+  background-color: var(--navy);
+  color: var(--blanco);
+}
+
+.oculto {
+  display: none;
 }
 
 section {
@@ -62,12 +106,19 @@ section h2 {
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease;
+}
+
+.evento.pre-animacion {
+  opacity: 0;
+  transform: translateY(24px);
 }
 
 .evento:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.13);
 }
 
 .evento img {
@@ -75,6 +126,11 @@ section h2 {
   height: 220px;
   object-fit: cover;
   object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.evento:hover img {
+  transform: scale(1.05);
 }
 
 .evento-info {
@@ -95,13 +151,28 @@ section h2 {
   font-size: 0.9rem;
 }
 
-a:focus-visible {
+a:focus-visible,
+.filtro-btn:focus-visible {
   outline: 3px solid var(--naranja);
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evento,
+  .evento.pre-animacion,
+  .evento img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 640px) {
   main {
     padding: 1.5rem 1.2rem;
+  }
+
+  main > h1 {
+    font-size: 1.8rem;
   }
 }

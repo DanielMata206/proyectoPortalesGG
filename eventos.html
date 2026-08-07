@@ -13,6 +13,7 @@
   </head>
   <body>
     <div id="header-placeholder"></div>
+
     <main>
       <h1>Nuestros Eventos</h1>
       <p class="intro">
@@ -20,8 +21,22 @@
         ayuda para llevar alimento y esperanza a las familias que más lo
         necesitan en Honduras.
       </p>
+
+      <div class="filtros" role="group" aria-label="Filtrar eventos">
+        <button type="button" class="filtro-btn activo" data-filtro="todos">
+          Todos
+        </button>
+        <button type="button" class="filtro-btn" data-filtro="proximos">
+          Próximos
+        </button>
+        <button type="button" class="filtro-btn" data-filtro="pasados">
+          Pasados
+        </button>
+      </div>
+
       <section id="proximos">
         <h2>Próximos Eventos</h2>
+
         <div class="eventos-grid">
           <article class="evento">
             <img
@@ -30,7 +45,9 @@
             />
             <div class="evento-info">
               <h3>Jornada de Entrega de Víveres en Comunidades Rurales</h3>
-              <p class="meta">Sábado 23 de agosto de 2026</p>
+              <p class="meta">
+                <time datetime="2026-08-22">Sábado 22 de agosto de 2026</time>
+              </p>
               <p class="meta">8:00 a.m. - 1:00 p.m.</p>
               <p class="meta">Aldea El Porvenir, Francisco Morazán</p>
               <p>
@@ -46,11 +63,14 @@
             <img
               src="img/voluntarios-panah.jpg"
               alt="Equipo de voluntarios de PANAH durante una jornada de ayuda en una iglesia"
+              loading="lazy"
             />
             <div class="evento-info">
               <h3>Brigada de Voluntarios PANAH</h3>
-              <p class="meta">Domingo 7 de septiembre de 2026</p>
-              <p class="meta">9:00 a.m. - 12:00 p.m.</p>
+              <p class="meta">
+                <time datetime="2026-09-06">Domingo 6 de septiembre de 2026</time>
+              </p>
+              <p class="meta">9:00 a.m. - 12:00 m.</p>
               <p class="meta">Sede de PANAH, Tegucigalpa</p>
               <p>
                 Convocatoria abierta para nuevos voluntarios. Se organizan las
@@ -65,10 +85,13 @@
             <img
               src="img/campana-una-bolsa.jpg"
               alt="Hombre adulto mayor recibe una bolsa de alimentos de parte de PANAH en una zona rural"
+              loading="lazy"
             />
             <div class="evento-info">
               <h3>Campaña "Una Bolsa, Una Familia"</h3>
-              <p class="meta">Sábado 27 de septiembre de 2026</p>
+              <p class="meta">
+                <time datetime="2026-09-26">Sábado 26 de septiembre de 2026</time>
+              </p>
               <p class="meta">7:00 a.m. - 11:00 a.m.</p>
               <p class="meta">Comayagüela, Distrito Central</p>
               <p>
@@ -89,10 +112,13 @@
             <img
               src="img/jornada-basilica.jpg"
               alt="Familias hondureñas resguardadas dentro de una basílica reciben alimentos y abrigo durante una jornada nocturna de PANAH"
+              loading="lazy"
             />
             <div class="evento-info">
               <h3>Jornada Nocturna de Apoyo en la Basílica</h3>
-              <p class="meta">18 de enero de 2026</p>
+              <p class="meta">
+                <time datetime="2026-01-18">18 de enero de 2026</time>
+              </p>
               <p class="meta">6:00 p.m. - 10:00 p.m.</p>
               <p class="meta">Basílica de Suyapa, Tegucigalpa</p>
               <p>
@@ -107,10 +133,13 @@
             <img
               src="img/reparto-mascarillas.jpg"
               alt="Joven sostiene un cartel de agradecimiento junto a los alimentos y mascarillas recibidos de PANAH"
+              loading="lazy"
             />
             <div class="evento-info">
               <h3>Campaña de Reparto de Mascarillas y Alimentos</h3>
-              <p class="meta">15 de noviembre de 2025</p>
+              <p class="meta">
+                <time datetime="2025-11-15">15 de noviembre de 2025</time>
+              </p>
               <p class="meta">9:00 a.m. - 2:00 p.m.</p>
               <p class="meta">Varias comunidades de Honduras</p>
               <p>
@@ -125,10 +154,13 @@
             <img
               src="img/nino-basilica.jpg"
               alt="Niño sonriente muestra el jugo y el sándwich que recibió en una jornada de PANAH"
+              loading="lazy"
             />
             <div class="evento-info">
               <h3>Entrega de Meriendas a la Niñez</h3>
-              <p class="meta">20 de diciembre de 2025</p>
+              <p class="meta">
+                <time datetime="2025-12-20">20 de diciembre de 2025</time>
+              </p>
               <p class="meta">3:00 p.m. - 6:00 p.m.</p>
               <p class="meta">Tegucigalpa, Francisco Morazán</p>
               <p>
@@ -146,5 +178,6 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/incluir.js"></script>
+    <script src="js/eventos.js"></script>
   </body>
 </html>

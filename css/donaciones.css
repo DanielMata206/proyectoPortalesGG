@@ -1,5 +1,3 @@
-/*------------------ESTILOS PERSONALIZADOS DONACIONES-------------*/
-
 .hero-donaciones {
     background: linear-gradient(135deg, #003d82 0%, #ff9d00 100%);
     color: white;
@@ -264,7 +262,7 @@
     line-height: 1.8;
 }
 
-/*------------------RESPONSIVE DONACIONES-------------*/
+/*------------------Responsive-------------*/
 
 @media (max-width: 768px) {
     .seccion-info {

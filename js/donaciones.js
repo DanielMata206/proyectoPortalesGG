@@ -1,4 +1,4 @@
-// Mostrar/ocultar campo de monto personalizado
+// Mostrar y ocultar campo de monto personalizado
 document.querySelectorAll('input[name="monto"]').forEach(radio => {
     radio.addEventListener('change', function() {
         const campoPersonalizado = document.getElementById('montoPersonalizado');

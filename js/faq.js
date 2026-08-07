@@ -1,4 +1,4 @@
-// Función para abrir/cerrar respuestas del FAQ
+// Función para abrir y cerrar respuestas
 function toggleFaq(button) {
     const respuesta = button.nextElementSibling;
     const todosFaq = document.querySelectorAll('.faq-pregunta');
@@ -17,7 +17,6 @@ function toggleFaq(button) {
         }
     });
 
-    // Toggle del FAQ actual
     button.classList.toggle('activo');
     respuesta.classList.toggle('visible');
 }
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Cerrar todos los FAQ al buscar
             document.querySelectorAll('.faq-pregunta').forEach(btn => {
                 btn.classList.remove('activo');
             });
@@ -55,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Animación de fadeIn para los resultados de búsqueda
+// Animación para los resultados de búsqueda
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeIn {
@@ -71,5 +69,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Log para debugging
 console.log('FAQ.js cargado correctamente');
