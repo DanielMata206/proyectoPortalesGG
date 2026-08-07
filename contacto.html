@@ -1,11 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | PANAH - Amigos Nutriendo a Honduras</title>
+    <meta
+      name="description"
+      content="Ponte en contacto con PANAH (Proyecto Amigos Nutriendo a Honduras). Escríbenos para ser voluntario, donar víveres o resolver tus dudas."
+    />
+    <meta name="theme-color" content="#003D82" />
+    <meta property="og:title" content="Contacto | PANAH" />
+    <meta
+      property="og:description"
+      content="Escríbenos para ser voluntario, donar víveres o resolver tus dudas."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_HN" />
+    <link rel="stylesheet" href="css/main_style.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+    <div id="header-placeholder"></div>
+
+    <main id="contenido">
+      <section class="hero-contacto" aria-labelledby="titulo-contacto">
+        <div class="hero-fondo" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="hero-etiqueta"><span></span> Estamos para ayudarte</p>
+          <h1 id="titulo-contacto">Hablemos. <em>Tu mensaje suma.</em></h1>
+          <p class="hero-texto">
+            ¿Querés ser voluntario, donar víveres o tenés una consulta?
+            Escribinos y con gusto te respondemos. Juntos podemos nutrir a más
+            familias en Honduras.
+          </p>
+        </div>
+      </section>
+
+      <div class="contacto-grid">
+        <section class="contacto-info" aria-labelledby="titulo-info">
+          <h2 id="titulo-info">Información de contacto</h2>
+          <ul class="lista-contacto">
+            <li>
+              <span class="icono-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <span class="dato">
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/panah_504/" target="_blank" rel="noopener">@panah_504</a>
+              </span>
+            </li>
+            <li>
+              <span class="icono-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="M3 7l9 6 9-6" />
+                </svg>
+              </span>
+              <span class="dato">
+                <strong>Correo</strong>
+                <span>contacto@panah.hn</span>
+              </span>
+            </li>
+            <li>
+              <span class="icono-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z" />
+                  <circle cx="12" cy="11" r="2" />
+                </svg>
+              </span>
+              <span class="dato">
+                <strong>Ubicación</strong>
+                <span>Tegucigalpa, Honduras</span>
+              </span>
+            </li>
+          </ul>
+          <p class="nota-donar">
+            ¿Preferís donar? Revisá nuestra página de
+            <a href="donaciones.html">Donaciones</a>.
+          </p>
+        </section>
+
+        <section class="contacto-form" aria-labelledby="titulo-form">
+          <h2 id="titulo-form">Envíanos un mensaje</h2>
+          <form id="form-contacto" novalidate>
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" />
+              <span class="error" id="error-nombre"></span>
+            </div>
+
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" />
+              <span class="error" id="error-correo"></span>
+            </div>
+
+            <div class="campo">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto">
+                <option value="">Seleccioná una opción</option>
+                <option value="voluntario">Quiero ser voluntario</option>
+                <option value="donar">Quiero donar</option>
+                <option value="viveres">Tengo víveres para donar</option>
+                <option value="general">Consulta general</option>
+              </select>
+              <span class="error" id="error-asunto"></span>
+            </div>
+
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+              <span class="error" id="error-mensaje"></span>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar mensaje</button>
+            <p class="exito" id="mensaje-exito"></p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/incluir.js"></script>
+    <script src="js/contacto.js"></script>
+  </body>
 </html>

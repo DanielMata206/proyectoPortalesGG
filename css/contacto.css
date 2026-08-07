@@ -1,0 +1,338 @@
+:root {
+  --navy: #003d82;
+  --navy-osc: #00234c;
+  --naranja: #ff9d00;
+  --naranja-osc: #e08900;
+  --magenta: #e91e63;
+  --cielo: #1e90ff;
+  --gris-texto: #333333;
+  --gris-suave: #f4f8fc;
+  --blanco: #ffffff;
+  --borde: #e2e6ec;
+  --rojo: #d32f2f;
+  --verde: #2e7d32;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--gris-texto);
+  background: linear-gradient(180deg, #dce7f2 0%, var(--gris-suave) 45%);
+  line-height: 1.6;
+}
+
+.saltar-contenido {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--navy);
+  color: var(--blanco);
+  padding: 10px 16px;
+  border-radius: 0 0 8px 0;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.saltar-contenido:focus {
+  left: 0;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.hero-contacto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  margin-bottom: 2.5rem;
+  color: var(--blanco);
+  min-height: 320px;
+  display: grid;
+  align-items: center;
+  box-shadow: 0 14px 34px rgba(0, 61, 130, 0.28);
+  animation: aparecer 0.6s ease both;
+}
+
+.hero-fondo {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      120deg,
+      rgba(0, 35, 76, 0.96) 0%,
+      rgba(0, 61, 130, 0.86) 55%,
+      rgba(0, 61, 130, 0.55) 100%
+    ),
+    url("../img/voluntarios-panah.jpg") center 30% / cover no-repeat;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2.5rem;
+  max-width: 680px;
+}
+
+.hero-etiqueta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--naranja);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-etiqueta span {
+  width: 34px;
+  height: 2px;
+  background: var(--magenta);
+}
+
+.hero-contacto h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.hero-contacto h1 em {
+  display: block;
+  color: var(--naranja);
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 0.82em;
+}
+
+.hero-texto {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contacto-info,
+.contacto-form {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  animation: aparecer 0.6s ease both;
+}
+
+.contacto-info {
+  animation-delay: 0.1s;
+}
+
+.contacto-form {
+  border-top: 5px solid var(--naranja);
+  animation-delay: 0.2s;
+}
+
+.contacto-info h2,
+.contacto-form h2 {
+  color: var(--navy);
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.lista-contacto {
+  list-style: none;
+  margin-bottom: 1.4rem;
+}
+
+.lista-contacto li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+.icono-badge {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--naranja) 0%, var(--naranja-osc) 100%);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(255, 157, 0, 0.35);
+}
+
+.icono-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.dato {
+  display: flex;
+  flex-direction: column;
+}
+
+.dato strong {
+  color: var(--navy);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dato a {
+  color: var(--naranja-osc);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dato a:hover {
+  text-decoration: underline;
+}
+
+.nota-donar {
+  background-color: var(--gris-suave);
+  border-left: 4px solid var(--magenta);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.nota-donar a {
+  color: var(--naranja-osc);
+  font-weight: bold;
+}
+
+.campo {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: bold;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 1.5px solid var(--borde);
+  border-radius: 9px;
+  background-color: var(--gris-suave);
+  color: var(--gris-texto);
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  background-color: var(--blanco);
+  box-shadow: 0 0 0 3px rgba(0, 61, 130, 0.12);
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo.invalido input,
+.campo.invalido select,
+.campo.invalido textarea {
+  border-color: var(--rojo);
+  background-color: #fdecea;
+}
+
+.error {
+  color: var(--rojo);
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  min-height: 1rem;
+}
+
+.btn-enviar {
+  background: linear-gradient(135deg, var(--naranja) 0%, var(--naranja-osc) 100%);
+  color: var(--blanco);
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 2.4rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(255, 157, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(255, 157, 0, 0.45);
+}
+
+.btn-enviar:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.exito {
+  color: var(--verde);
+  font-weight: bold;
+  margin-top: 1rem;
+  min-height: 1.2rem;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-contacto,
+  .contacto-info,
+  .contacto-form {
+    animation: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .hero-inner {
+    padding: 2.2rem 1.5rem;
+  }
+}
