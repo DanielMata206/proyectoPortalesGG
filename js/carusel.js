@@ -5,7 +5,6 @@ class Carusel {
     slidesCount = 0;
     intervalTime = 0;
     currentIndex = 0;
-    direction = 1;
     btnLeft = null;
     btnRight = null;
     timeoutId = null;
@@ -43,6 +42,7 @@ class Carusel {
             btnIdx.addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
+                if(this.onProcess) return;
                 this.onProcess = true;
                 this.clearTimeout();
                 this.currentIndex = i;
@@ -81,23 +81,19 @@ class Carusel {
         this.btnLeft.addEventListener("click", (e)=>{
             e.preventDefault();
             e.stopPropagation();
-            if(this.onProcess || this.currentIndex <= 0 ) {
-                return;
-            }
+            if(this.onProcess) return;
             this.onProcess = true;
             this.clearTimeout();
-            this.currentIndex--;
+            this.currentIndex = (this.currentIndex - 1 + this.slidesCount) % this.slidesCount;
             this.moveSlide();
         });
         this.btnRight.addEventListener("click", (e)=>{
             e.preventDefault();
             e.stopPropagation();
-            if(this.onProcess || this.currentIndex >= this.slidesCount ) {
-                return;
-            }
+            if(this.onProcess) return;
             this.onProcess = true;
             this.clearTimeout();
-            this.currentIndex++;
+            this.currentIndex = (this.currentIndex + 1) % this.slidesCount;
             this.moveSlide();
         });
         this.root.appendChild(this.btnLeft);
@@ -113,8 +109,8 @@ class Carusel {
     tick(){
         this.timeoutId = setTimeout(
             (()=>{
-                this.onProcess=true;
-                this.currentIndex += this.direction;
+                this.onProcess = true;
+                this.currentIndex = (this.currentIndex + 1) % this.slidesCount;
                 this.moveSlide();
             }).bind(this)
             , this.intervalTime
@@ -122,11 +118,7 @@ class Carusel {
     }
 
     moveSlide(){
-        if(this.currentIndex >= this.slidesCount || this.currentIndex < 0) {
-            this.direction *= -1;
-            this.currentIndex = this.currentIndex + (this.direction * 2);
-        }
-        this.trail.style.transform = `translateX(${(100*this.currentIndex*-1)}vw)`;
+        this.trail.style.transform = `translateX(${(100*this.currentIndex*-1)}%)`;
         this.updateCurrentIndexedBtn();
         this.onProcess = false;
         this.tick();

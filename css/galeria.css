@@ -7,6 +7,12 @@
   --borde: #e2e6ec;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--gris-texto);
+  background-color: var(--gris-suave);
+  line-height: 1.6;
+}
 main {
   max-width: 1100px;
   margin: 0 auto;
