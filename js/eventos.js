@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.15 },
   );
 
   tarjetas.forEach(function (tarjeta) {

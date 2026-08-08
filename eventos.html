@@ -3,24 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventos - PANAH</title>
+    <title>Eventos | PANAH - Amigos Nutriendo a Honduras</title>
     <meta
       name="description"
       content="Calendario de eventos de PANAH (Proyecto Amigos Nutriendo a Honduras): jornadas de entrega de víveres, brigadas de voluntarios y campañas de ayuda humanitaria."
     />
+    <meta name="theme-color" content="#003D82" />
+    <meta property="og:title" content="Eventos | PANAH" />
+    <meta
+      property="og:description"
+      content="Jornadas de entrega de víveres, brigadas de voluntarios y campañas de ayuda en Honduras."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_HN" />
     <link rel="stylesheet" href="css/main_style.css" />
     <link rel="stylesheet" href="css/eventos.css" />
   </head>
   <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
     <div id="header-placeholder"></div>
 
-    <main>
-      <h1>Nuestros Eventos</h1>
-      <p class="intro">
-        Jornadas de entrega de víveres, brigadas de voluntarios y campañas de
-        ayuda para llevar alimento y esperanza a las familias que más lo
-        necesitan en Honduras.
-      </p>
+    <main id="contenido">
+      <section class="hero-eventos" aria-labelledby="titulo-eventos">
+        <div class="hero-fondo" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="hero-etiqueta"><span></span> Sumate a la causa</p>
+          <h1 id="titulo-eventos">
+            Nuestros Eventos <em>Cada jornada cuenta.</em>
+          </h1>
+          <p class="hero-texto">
+            Jornadas de entrega de víveres, brigadas de voluntarios y campañas
+            de ayuda para llevar alimento y esperanza a las familias que más lo
+            necesitan en Honduras.
+          </p>
+        </div>
+      </section>
 
       <div class="filtros" role="group" aria-label="Filtrar eventos">
         <button type="button" class="filtro-btn activo" data-filtro="todos">
@@ -34,8 +51,8 @@
         </button>
       </div>
 
-      <section id="proximos">
-        <h2>Próximos Eventos</h2>
+      <section id="proximos" aria-labelledby="titulo-proximos">
+        <h2 id="titulo-proximos">Próximos Eventos</h2>
 
         <div class="eventos-grid">
           <article class="evento">
@@ -68,7 +85,9 @@
             <div class="evento-info">
               <h3>Brigada de Voluntarios PANAH</h3>
               <p class="meta">
-                <time datetime="2026-09-06">Domingo 6 de septiembre de 2026</time>
+                <time datetime="2026-09-06"
+                  >Domingo 6 de septiembre de 2026</time
+                >
               </p>
               <p class="meta">9:00 a.m. - 12:00 m.</p>
               <p class="meta">Sede de PANAH, Tegucigalpa</p>
@@ -90,7 +109,9 @@
             <div class="evento-info">
               <h3>Campaña "Una Bolsa, Una Familia"</h3>
               <p class="meta">
-                <time datetime="2026-09-26">Sábado 26 de septiembre de 2026</time>
+                <time datetime="2026-09-26"
+                  >Sábado 26 de septiembre de 2026</time
+                >
               </p>
               <p class="meta">7:00 a.m. - 11:00 a.m.</p>
               <p class="meta">Comayagüela, Distrito Central</p>
@@ -104,8 +125,8 @@
         </div>
       </section>
 
-      <section id="pasados">
-        <h2>Eventos Pasados</h2>
+      <section id="pasados" aria-labelledby="titulo-pasados">
+        <h2 id="titulo-pasados">Eventos Pasados</h2>
 
         <div class="eventos-grid">
           <article class="evento">

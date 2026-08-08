@@ -64,7 +64,8 @@ main {
 .hero-fondo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       120deg,
       rgba(0, 35, 76, 0.96) 0%,
       rgba(0, 61, 130, 0.86) 55%,
@@ -170,7 +171,11 @@ main {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--naranja) 0%, var(--naranja-osc) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--naranja) 0%,
+    var(--naranja-osc) 100%
+  );
   color: var(--blanco);
   display: flex;
   align-items: center;
@@ -208,12 +213,41 @@ main {
 .nota-donar {
   background-color: var(--gris-suave);
   border-left: 4px solid var(--magenta);
-  padding: 0.8rem 1rem;
+  padding: 1rem 1.1rem;
   border-radius: 8px;
   font-size: 0.95rem;
 }
 
-.nota-donar a {
+.btn-donar {
+  display: inline-block;
+  margin: 0.7rem 0;
+  background: linear-gradient(135deg, var(--magenta) 0%, #c2185b 100%);
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.35);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-donar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(233, 30, 99, 0.45);
+}
+
+.btn-donar:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.donar-mas {
+  font-size: 0.9rem;
+}
+
+.donar-mas a {
   color: var(--naranja-osc);
   font-weight: bold;
 }
@@ -241,7 +275,9 @@ main {
   border-radius: 9px;
   background-color: var(--gris-suave);
   color: var(--gris-texto);
-  transition: border-color 0.2s ease, background-color 0.2s ease,
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
@@ -273,7 +309,11 @@ main {
 }
 
 .btn-enviar {
-  background: linear-gradient(135deg, var(--naranja) 0%, var(--naranja-osc) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--naranja) 0%,
+    var(--naranja-osc) 100%
+  );
   color: var(--blanco);
   border: none;
   border-radius: 999px;
@@ -282,7 +322,9 @@ main {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(255, 157, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn-enviar:hover {

@@ -1,8 +1,12 @@
 :root {
   --navy: #003d82;
+  --navy-osc: #00234c;
   --naranja: #ff9d00;
+  --naranja-osc: #e08900;
+  --magenta: #e91e63;
+  --cielo: #1e90ff;
   --gris-texto: #333333;
-  --gris-suave: #f4f6f9;
+  --gris-suave: #f4f8fc;
   --blanco: #ffffff;
   --borde: #e2e6ec;
 }
@@ -16,8 +20,24 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--gris-texto);
-  background-color: var(--gris-suave);
+  background: linear-gradient(180deg, #dce7f2 0%, var(--gris-suave) 45%);
   line-height: 1.6;
+}
+
+.saltar-contenido {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--navy);
+  color: var(--blanco);
+  padding: 10px 16px;
+  border-radius: 0 0 8px 0;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.saltar-contenido:focus {
+  left: 0;
 }
 
 main {
@@ -26,26 +46,76 @@ main {
   padding: 2.5rem 2rem;
 }
 
-main > h1 {
-  color: var(--navy);
-  font-size: 2.2rem;
-  margin-bottom: 0.75rem;
-}
-
-main > h1::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  background-color: var(--naranja);
-  border-radius: 2px;
-  margin-top: 0.6rem;
-}
-
-.intro {
-  max-width: 720px;
+.hero-eventos {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
   margin-bottom: 2.5rem;
-  color: #555555;
+  color: var(--blanco);
+  min-height: 320px;
+  display: grid;
+  align-items: center;
+  box-shadow: 0 14px 34px rgba(0, 61, 130, 0.28);
+  animation: aparecer 0.6s ease both;
+}
+
+.hero-fondo {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(0, 35, 76, 0.96) 0%,
+      rgba(0, 61, 130, 0.86) 55%,
+      rgba(0, 61, 130, 0.55) 100%
+    ),
+    url("../img/jornada-basilica.jpg") center 35% / cover no-repeat;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2.5rem;
+  max-width: 700px;
+}
+
+.hero-etiqueta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--naranja);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-etiqueta span {
+  width: 34px;
+  height: 2px;
+  background: var(--magenta);
+}
+
+.hero-eventos h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.hero-eventos h1 em {
+  display: block;
+  color: var(--naranja);
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 0.82em;
+}
+
+.hero-texto {
+  max-width: 580px;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.05rem;
 }
 
@@ -65,7 +135,9 @@ main > h1::after {
   padding: 0.5rem 1.2rem;
   border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .filtro-btn:hover {
@@ -101,14 +173,17 @@ section h2 {
 .evento {
   background-color: var(--blanco);
   border: 1px solid var(--borde);
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    box-shadow 0.25s ease;
 }
 
 .evento.pre-animacion {
@@ -118,7 +193,7 @@ section h2 {
 
 .evento:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
 }
 
 .evento img {
@@ -146,7 +221,7 @@ section h2 {
 }
 
 .meta {
-  color: var(--naranja);
+  color: var(--naranja-osc);
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -157,13 +232,26 @@ a:focus-visible,
   outline-offset: 2px;
 }
 
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero-eventos,
   .evento,
   .evento.pre-animacion,
   .evento img {
     opacity: 1;
     transform: none;
     transition: none;
+    animation: none;
   }
 }
 
@@ -172,7 +260,7 @@ a:focus-visible,
     padding: 1.5rem 1.2rem;
   }
 
-  main > h1 {
-    font-size: 1.8rem;
+  .hero-inner {
+    padding: 2.2rem 1.5rem;
   }
 }
